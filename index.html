@@ -3,105 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Professional Resume</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
             padding: 20px;
-        }
-        .header, .section {
-            margin-bottom: 20px;
+            background-color: #f4f4f4;
         }
         .header {
             text-align: center;
+            margin-bottom: 20px;
         }
-        .header h1 {
-            margin: 0;
+        .header a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
         }
-        .header p {
-            margin: 5px 0;
-            color: #666;
+        .experience-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
-        .section h2 {
-            margin: 0;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+        .experience-table th, .experience-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
         }
-        .section ul {
-            list-style-type: none;
-            padding: 0;
+        .experience-table th {
+            background-color: #f2f2f2;
         }
-        .section ul li {
-            margin-bottom: 10px;
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .section ul li h3 {
-            margin: 0;
-            font-size: 1.2em;
+        .popup-close {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
         }
-        .section ul li p {
-            margin: 5px 0;
-            color: #666;
+        .popup-close a {
+            text-decoration: none;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>John Doe</h1>
-            <p>Email: johndoe@example.com | Phone: (123) 456-7890</p>
-            <p>LinkedIn: linkedin.com/in/johndoe | GitHub: github.com/johndoe</p>
-        </div>
-        <div class="section">
-            <h2>Summary</h2>
-            <p>Experienced web developer with a strong background in developing award-winning applications for a diverse clientele. Skilled in front-end and back-end development, and passionate about creating efficient, scalable, and user-friendly solutions.</p>
-        </div>
-        <div class="section">
-            <h2>Experience</h2>
-            <ul>
-                <li>
-                    <h3>Senior Web Developer</h3>
-                    <p>ABC Company | January 2020 - Present</p>
-                    <p>Developed and maintained web applications using JavaScript, React, and Node.js. Led a team of 5 developers in creating projects that improved user engagement by 30%.</p>
-                </li>
-                <li>
-                    <h3>Web Developer</h3>
-                    <p>XYZ Inc. | June 2015 - December 2019</p>
-                    <p>Worked on front-end development using HTML, CSS, and JavaScript. Collaborated with designers and back-end developers to create seamless user experiences.</p>
-                </li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <h3>Bachelor of Science in Computer Science</h3>
-                    <p>University of Technology | Graduated May 2015</p>
-                </li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>JavaScript, React, Node.js</li>
-                <li>HTML, CSS, SASS</li>
-                <li>Git, GitHub, Agile methodologies</li>
-                <li>Responsive design, Cross-browser compatibility</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Certified JavaScript Developer</li>
-                <li>React Professional Certification</li>
-            </ul>
-        </div>
+    <div class="header">
+        <h1>Your Name</h1>
+        <a href="https://www.linkedin.com/in/your-linkedin-profile">LinkedIn</a>
+        <a href="https://github.com/your-github-profile">GitHub</a>
+        <a href="mailto:your-email@example.com">Email</a>
+        <a href="tel:+1234567890">Phone</a>
     </div>
+
+    <h2>Experience</h2>
+    <table class="experience-table">
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Company</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr onclick="showPopup('exp1')">
+                <td>Software Engineer</td>
+                <td>ABC Corp</td>
+                <td>Jan 2020 - Present</td>
+            </tr>
+            <tr onclick="showPopup('exp2')">
+                <td>Web Developer</td>
+                <td>XYZ Ltd</td>
+                <td>Mar 2018 - Dec 2019</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="exp1" class="popup">
+        <h3>Software Engineer at ABC Corp</h3>
+        <p>Details about Software Engineer role at ABC Corp.</p>
+        <div class="popup-close"><a href="#" onclick="hidePopup('exp1')">Close</a></div>
+    </div>
+
+    <div id="exp2" class="popup">
+        <h3>Web Developer at XYZ Ltd</h3>
+        <p>Details about Web Developer role at XYZ Ltd.</p>
+        <div class="popup-close"><a href="#" onclick="hidePopup('exp2')">Close</a></div>
+    </div>
+
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function hidePopup(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
 </body>
 </html>
