@@ -1,12 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header, .section {
+            margin-bottom: 20px;
+        }
+        .header {
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .section h2 {
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .section ul li h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .section ul li p {
+            margin: 5px 0;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
+    <div class="container">
+        <div class="header">
+            <h1>John Doe</h1>
+            <p>Email: johndoe@example.com | Phone: (123) 456-7890</p>
+            <p>LinkedIn: linkedin.com/in/johndoe | GitHub: github.com/johndoe</p>
+        </div>
+        <div class="section">
+            <h2>Summary</h2>
+            <p>Experienced web developer with a strong background in developing award-winning applications for a diverse clientele. Skilled in front-end and back-end development, and passionate about creating efficient, scalable, and user-friendly solutions.</p>
+        </div>
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <h3>Senior Web Developer</h3>
+                    <p>ABC Company | January 2020 - Present</p>
+                    <p>Developed and maintained web applications using JavaScript, React, and Node.js. Led a team of 5 developers in creating projects that improved user engagement by 30%.</p>
+                </li>
+                <li>
+                    <h3>Web Developer</h3>
+                    <p>XYZ Inc. | June 2015 - December 2019</p>
+                    <p>Worked on front-end development using HTML, CSS, and JavaScript. Collaborated with designers and back-end developers to create seamless user experiences.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p>University of Technology | Graduated May 2015</p>
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>JavaScript, React, Node.js</li>
+                <li>HTML, CSS, SASS</li>
+                <li>Git, GitHub, Agile methodologies</li>
+                <li>Responsive design, Cross-browser compatibility</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Certified JavaScript Developer</li>
+                <li>React Professional Certification</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
